@@ -89,7 +89,7 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
                 return false;
             }
         });
-
+*/
         findPreference("clearSearchHistory").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
@@ -99,7 +99,7 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
                 return false;
             }
         });
-
+/*
         for (int i = 1; i <= 3; i++) {
             String instance = String.valueOf(i);
             serverSettings.put(instance, new ServerSettings(instance));
