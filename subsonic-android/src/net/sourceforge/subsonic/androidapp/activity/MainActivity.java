@@ -341,8 +341,8 @@ public class MainActivity extends SubsonicTabActivity {
     private void showInfoDialog() {
         if (!infoDialogDisplayed) {
             infoDialogDisplayed = true;
-            if (Util.getRestUrl(this, null).contains("demo.subsonic.org")) {
-                Util.info(this, R.string.main_welcome_title, R.string.main_welcome_text);
+            if (!Util.isAccountConfigured(this)) {
+            	Util.info(this, R.string.main_welcome_title, R.string.main_welcome_text);
             }
         }
     }

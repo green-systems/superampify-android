@@ -881,4 +881,10 @@ public final class Util {
             Thread.setDefaultUncaughtExceptionHandler(new SubsonicUncaughtExceptionHandler(context));
         }
     }
+    
+    public static Boolean isAccountConfigured(Context context) {
+    	SharedPreferences prefs = getPreferences(context);
+    	String username = prefs.getString(Constants.PREFERENCES_KEY_USERNAME + 2, "");
+    	return !username.equals("");
+    }
 }
