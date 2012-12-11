@@ -22,7 +22,7 @@
     <application android:label="@string/common.appname" android:icon="@drawable/launch" android:theme="@style/SubsonicTheme">
 
         <activity android:name="net.sourceforge.subsonic.androidapp.activity.MainActivity"
-                  android:label="Subsonic"
+                  android:label="Subtunes"
                   android:configChanges="orientation|keyboardHidden"
                   android:launchMode="standard">
             <intent-filter>
