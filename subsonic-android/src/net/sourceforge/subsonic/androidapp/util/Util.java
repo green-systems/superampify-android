@@ -118,8 +118,7 @@ public final class Util {
     }
 
     public static PurchaseMode getAdRemovalPurchaseMode(Context context) {
-        SharedPreferences prefs = getPreferences(context);
-        return PurchaseMode.valueOf(prefs.getString(Constants.PREFERENCES_KEY_AD_REMOVAL_PURCHASE_MODE, PurchaseMode.UNKNOWN.name()));
+        return PurchaseMode.PURCHASED; 
     }
 
     public static void setAdRemovalPurchaseMode(Context context, PurchaseMode purchaseMode) {
