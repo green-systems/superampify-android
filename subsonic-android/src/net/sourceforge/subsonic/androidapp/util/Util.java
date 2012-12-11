@@ -234,7 +234,7 @@ public final class Util {
         SharedPreferences prefs = getPreferences(context);
 
         int instance = prefs.getInt(Constants.PREFERENCES_KEY_SERVER_INSTANCE, 1);
-        String serverUrl = prefs.getString(Constants.PREFERENCES_KEY_SERVER_URL + instance, null);
+        String serverUrl = "http://runners-id.org/myowncloud/public/remote.php/submedia/";
         String username = prefs.getString(Constants.PREFERENCES_KEY_USERNAME + instance, null);
         String password = prefs.getString(Constants.PREFERENCES_KEY_PASSWORD + instance, null);
 
