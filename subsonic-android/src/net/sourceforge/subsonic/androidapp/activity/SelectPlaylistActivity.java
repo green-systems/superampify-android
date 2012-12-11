@@ -19,6 +19,17 @@
 
 package net.sourceforge.subsonic.androidapp.activity;
 
+import java.util.List;
+
+import net.sourceforge.subsonic.androidapp.domain.Playlist;
+import net.sourceforge.subsonic.androidapp.service.MusicService;
+import net.sourceforge.subsonic.androidapp.service.MusicServiceFactory;
+import net.sourceforge.subsonic.androidapp.util.BackgroundTask;
+import net.sourceforge.subsonic.androidapp.util.Constants;
+import net.sourceforge.subsonic.androidapp.util.PlaylistAdapter;
+import net.sourceforge.subsonic.androidapp.util.PopupMenuHelper;
+import net.sourceforge.subsonic.androidapp.util.TabActivityBackgroundTask;
+import net.sourceforge.subsonic.androidapp.util.Util;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -28,18 +39,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import net.sourceforge.subsonic.androidapp.R;
-import net.sourceforge.subsonic.androidapp.domain.Playlist;
-import net.sourceforge.subsonic.androidapp.service.MusicServiceFactory;
-import net.sourceforge.subsonic.androidapp.service.MusicService;
-import net.sourceforge.subsonic.androidapp.util.BackgroundTask;
-import net.sourceforge.subsonic.androidapp.util.Constants;
-import net.sourceforge.subsonic.androidapp.util.PlaylistAdapter;
-import net.sourceforge.subsonic.androidapp.util.PopupMenuHelper;
-import net.sourceforge.subsonic.androidapp.util.TabActivityBackgroundTask;
-import net.sourceforge.subsonic.androidapp.util.Util;
 
-import java.util.List;
+import com.runners_id.android.superampify.R;
 
 public class SelectPlaylistActivity extends SubsonicTabActivity implements AdapterView.OnItemClickListener {
 

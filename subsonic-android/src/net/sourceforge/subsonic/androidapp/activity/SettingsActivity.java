@@ -23,17 +23,6 @@ import java.net.URL;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.preference.EditTextPreference;
-import android.preference.ListPreference;
-import android.preference.Preference;
-import android.preference.PreferenceActivity;
-import android.preference.PreferenceScreen;
-import android.provider.SearchRecentSuggestions;
-import android.util.Log;
-import net.sourceforge.subsonic.androidapp.R;
-import net.sourceforge.subsonic.androidapp.provider.SearchSuggestionProvider;
 import net.sourceforge.subsonic.androidapp.service.DownloadService;
 import net.sourceforge.subsonic.androidapp.service.DownloadServiceImpl;
 import net.sourceforge.subsonic.androidapp.service.MusicService;
@@ -43,6 +32,18 @@ import net.sourceforge.subsonic.androidapp.util.ErrorDialog;
 import net.sourceforge.subsonic.androidapp.util.FileUtil;
 import net.sourceforge.subsonic.androidapp.util.ModalBackgroundTask;
 import net.sourceforge.subsonic.androidapp.util.Util;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.preference.EditTextPreference;
+import android.preference.ListPreference;
+import android.preference.Preference;
+import android.preference.PreferenceActivity;
+import android.preference.PreferenceScreen;
+import android.provider.SearchRecentSuggestions;
+import android.util.Log;
+
+import com.runners_id.android.superampify.R;
+import com.runners_id.android.superampify.provider.SearchSuggestionProvider;
 
 public class SettingsActivity extends PreferenceActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 

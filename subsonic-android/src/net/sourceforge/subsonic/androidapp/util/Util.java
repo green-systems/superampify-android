@@ -36,12 +36,16 @@ import java.util.Hashtable;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.apache.http.HttpEntity;
+import net.sourceforge.subsonic.androidapp.activity.DownloadActivity;
+import net.sourceforge.subsonic.androidapp.billing.PurchaseMode;
+import net.sourceforge.subsonic.androidapp.domain.MusicDirectory;
+import net.sourceforge.subsonic.androidapp.domain.PlayerState;
+import net.sourceforge.subsonic.androidapp.domain.RepeatMode;
+import net.sourceforge.subsonic.androidapp.domain.Version;
+import net.sourceforge.subsonic.androidapp.receiver.MediaButtonIntentReceiver;
+import net.sourceforge.subsonic.androidapp.service.DownloadServiceImpl;
 
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
-import com.inneractive.api.ads.InneractiveAd;
+import org.apache.http.HttpEntity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -70,16 +74,13 @@ import android.widget.LinearLayout;
 import android.widget.RemoteViews;
 import android.widget.TextView;
 import android.widget.Toast;
-import net.sourceforge.subsonic.androidapp.R;
-import net.sourceforge.subsonic.androidapp.activity.DownloadActivity;
-import net.sourceforge.subsonic.androidapp.billing.PurchaseMode;
-import net.sourceforge.subsonic.androidapp.domain.MusicDirectory;
-import net.sourceforge.subsonic.androidapp.domain.PlayerState;
-import net.sourceforge.subsonic.androidapp.domain.RepeatMode;
-import net.sourceforge.subsonic.androidapp.domain.Version;
-import net.sourceforge.subsonic.androidapp.provider.SubsonicAppWidgetProvider;
-import net.sourceforge.subsonic.androidapp.receiver.MediaButtonIntentReceiver;
-import net.sourceforge.subsonic.androidapp.service.DownloadServiceImpl;
+
+import com.google.ads.AdRequest;
+import com.google.ads.AdSize;
+import com.google.ads.AdView;
+import com.inneractive.api.ads.InneractiveAd;
+import com.runners_id.android.superampify.R;
+import com.runners_id.android.superampify.provider.SubsonicAppWidgetProvider;
 
 /**
  * @author Sindre Mehus

@@ -18,16 +18,18 @@
  */
 package net.sourceforge.subsonic.androidapp.view;
 
+import net.sourceforge.subsonic.androidapp.audiofx.VisualizerController;
+import net.sourceforge.subsonic.androidapp.domain.PlayerState;
+import net.sourceforge.subsonic.androidapp.service.DownloadService;
+import net.sourceforge.subsonic.androidapp.service.DownloadServiceImpl;
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.media.audiofx.Visualizer;
 import android.view.View;
-import net.sourceforge.subsonic.androidapp.R;
-import net.sourceforge.subsonic.androidapp.audiofx.VisualizerController;
-import net.sourceforge.subsonic.androidapp.domain.PlayerState;
-import net.sourceforge.subsonic.androidapp.service.DownloadService;
-import net.sourceforge.subsonic.androidapp.service.DownloadServiceImpl;
+
+import com.runners_id.android.superampify.R;
 
 /**
  * A simple class that draws waveform data received from a
@@ -36,6 +38,7 @@ import net.sourceforge.subsonic.androidapp.service.DownloadServiceImpl;
  * @author Sindre Mehus
  * @version $Id$
  */
+@TargetApi(9)
 public class VisualizerView extends View {
 
     private static final int PREFERRED_CAPTURE_RATE_MILLIHERTZ = 20000;

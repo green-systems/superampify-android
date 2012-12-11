@@ -21,7 +21,12 @@ package net.sourceforge.subsonic.androidapp.activity;
 
 import java.lang.reflect.Method;
 
+import net.sourceforge.subsonic.androidapp.service.MusicServiceFactory;
+import net.sourceforge.subsonic.androidapp.util.Constants;
+import net.sourceforge.subsonic.androidapp.util.Util;
 import android.app.Activity;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.media.AudioManager;
 import android.os.Bundle;
@@ -29,12 +34,8 @@ import android.util.Log;
 import android.view.Window;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import net.sourceforge.subsonic.androidapp.R;
-import net.sourceforge.subsonic.androidapp.service.MusicServiceFactory;
-import net.sourceforge.subsonic.androidapp.util.Constants;
-import net.sourceforge.subsonic.androidapp.util.Util;
+
+import com.runners_id.android.superampify.R;
 
 /**
  * Plays videos in a web page.

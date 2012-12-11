@@ -19,6 +19,7 @@
 
 package net.sourceforge.subsonic.androidapp.activity;
 
+import net.sourceforge.subsonic.androidapp.util.Util;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -28,8 +29,8 @@ import android.view.Window;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
-import net.sourceforge.subsonic.androidapp.R;
-import net.sourceforge.subsonic.androidapp.util.Util;
+
+import com.runners_id.android.superampify.R;
 
 /**
  * An HTML-based help screen with Back and Done buttons at the bottom.

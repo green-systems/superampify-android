@@ -16,12 +16,14 @@
 
 package net.sourceforge.subsonic.androidapp.billing;
 
-import net.sourceforge.subsonic.androidapp.R;
-import net.sourceforge.subsonic.androidapp.billing.BillingService.RequestPurchase;
-import net.sourceforge.subsonic.androidapp.billing.BillingService.RestoreTransactions;
+import java.util.HashSet;
+import java.util.Locale;
+import java.util.Set;
+
 import net.sourceforge.subsonic.androidapp.billing.BillingConstants.PurchaseState;
 import net.sourceforge.subsonic.androidapp.billing.BillingConstants.ResponseCode;
-
+import net.sourceforge.subsonic.androidapp.billing.BillingService.RequestPurchase;
+import net.sourceforge.subsonic.androidapp.billing.BillingService.RestoreTransactions;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -34,8 +36,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Html;
-import android.text.Spanned;
 import android.text.SpannableStringBuilder;
+import android.text.Spanned;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -50,9 +52,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.HashSet;
-import java.util.Locale;
-import java.util.Set;
+import com.runners_id.android.superampify.R;
 
 /**
  * A sample application that demonstrates in-app billing.

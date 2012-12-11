@@ -22,7 +22,8 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.util.Log;
-import net.sourceforge.subsonic.androidapp.R;
+
+import com.runners_id.android.superampify.R;
 
 /**
  * @author Sindre Mehus

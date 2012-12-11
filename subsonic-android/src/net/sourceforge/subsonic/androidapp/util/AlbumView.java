@@ -18,13 +18,14 @@
  */
 package net.sourceforge.subsonic.androidapp.util;
 
+import net.sourceforge.subsonic.androidapp.domain.MusicDirectory;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import net.sourceforge.subsonic.androidapp.R;
-import net.sourceforge.subsonic.androidapp.domain.MusicDirectory;
+
+import com.runners_id.android.superampify.R;
 
 /**
  * Used to display albums in a {@code ListView}.

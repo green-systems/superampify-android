@@ -18,14 +18,17 @@
  */
 package net.sourceforge.subsonic.androidapp.service.parser;
 
-import android.content.Context;
-import android.util.Log;
-import net.sourceforge.subsonic.androidapp.R;
+import java.io.Reader;
+
 import net.sourceforge.subsonic.androidapp.domain.MusicDirectory;
 import net.sourceforge.subsonic.androidapp.util.ProgressListener;
+
 import org.xmlpull.v1.XmlPullParser;
 
-import java.io.Reader;
+import android.content.Context;
+import android.util.Log;
+
+import com.runners_id.android.superampify.R;
 
 /**
  * @author Sindre Mehus

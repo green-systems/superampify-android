@@ -18,6 +18,13 @@
  */
 package net.sourceforge.subsonic.androidapp.util;
 
+import java.io.File;
+import java.util.WeakHashMap;
+
+import net.sourceforge.subsonic.androidapp.domain.MusicDirectory;
+import net.sourceforge.subsonic.androidapp.service.DownloadFile;
+import net.sourceforge.subsonic.androidapp.service.DownloadService;
+import net.sourceforge.subsonic.androidapp.service.DownloadServiceImpl;
 import android.content.Context;
 import android.os.Handler;
 import android.util.Log;
@@ -25,19 +32,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Checkable;
 import android.widget.CheckedTextView;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import net.sourceforge.subsonic.androidapp.R;
-import net.sourceforge.subsonic.androidapp.domain.MusicDirectory;
-import net.sourceforge.subsonic.androidapp.service.DownloadService;
-import net.sourceforge.subsonic.androidapp.service.DownloadServiceImpl;
-import net.sourceforge.subsonic.androidapp.service.DownloadFile;
 
-import java.io.File;
-import java.util.WeakHashMap;
+import com.runners_id.android.superampify.R;
 
 /**
  * Used to display songs in a {@code ListView}.

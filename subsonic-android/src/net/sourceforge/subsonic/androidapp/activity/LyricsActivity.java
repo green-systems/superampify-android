@@ -19,15 +19,16 @@
 
 package net.sourceforge.subsonic.androidapp.activity;
 
-import android.os.Bundle;
-import android.widget.TextView;
-import net.sourceforge.subsonic.androidapp.R;
 import net.sourceforge.subsonic.androidapp.domain.Lyrics;
 import net.sourceforge.subsonic.androidapp.service.MusicService;
 import net.sourceforge.subsonic.androidapp.service.MusicServiceFactory;
 import net.sourceforge.subsonic.androidapp.util.BackgroundTask;
 import net.sourceforge.subsonic.androidapp.util.Constants;
 import net.sourceforge.subsonic.androidapp.util.TabActivityBackgroundTask;
+import android.os.Bundle;
+import android.widget.TextView;
+
+import com.runners_id.android.superampify.R;
 
 /**
  * Displays song lyrics.

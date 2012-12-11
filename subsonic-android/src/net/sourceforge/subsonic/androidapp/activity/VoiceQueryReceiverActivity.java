@@ -19,6 +19,8 @@
 
 package net.sourceforge.subsonic.androidapp.activity;
 
+import com.runners_id.android.superampify.provider.SearchSuggestionProvider;
+
 import android.app.Activity;
 import android.app.SearchManager;
 import android.content.Intent;
@@ -26,7 +28,6 @@ import android.os.Bundle;
 import android.provider.SearchRecentSuggestions;
 import net.sourceforge.subsonic.androidapp.util.Constants;
 import net.sourceforge.subsonic.androidapp.util.Util;
-import net.sourceforge.subsonic.androidapp.provider.SearchSuggestionProvider;
 
 /**
  * Receives voice search queries and forwards to the SearchActivity.

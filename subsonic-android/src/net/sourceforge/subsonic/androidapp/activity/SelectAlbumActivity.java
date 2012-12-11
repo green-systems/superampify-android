@@ -18,12 +18,35 @@
  */
 package net.sourceforge.subsonic.androidapp.activity;
 
+import static net.sourceforge.subsonic.androidapp.util.Constants.DONATION_URL;
+import static net.sourceforge.subsonic.androidapp.util.Constants.FREE_TRIAL_DAYS;
+import static net.sourceforge.subsonic.androidapp.util.Constants.INTENT_EXTRA_NAME_ALBUM_LIST_OFFSET;
+import static net.sourceforge.subsonic.androidapp.util.Constants.INTENT_EXTRA_NAME_ALBUM_LIST_SIZE;
+import static net.sourceforge.subsonic.androidapp.util.Constants.INTENT_EXTRA_NAME_ALBUM_LIST_TYPE;
+import static net.sourceforge.subsonic.androidapp.util.Constants.INTENT_EXTRA_NAME_AUTOPLAY;
+import static net.sourceforge.subsonic.androidapp.util.Constants.INTENT_EXTRA_NAME_ID;
+import static net.sourceforge.subsonic.androidapp.util.Constants.INTENT_EXTRA_NAME_NAME;
+import static net.sourceforge.subsonic.androidapp.util.Constants.INTENT_EXTRA_NAME_PARENT_ID;
+import static net.sourceforge.subsonic.androidapp.util.Constants.INTENT_EXTRA_NAME_PARENT_NAME;
+import static net.sourceforge.subsonic.androidapp.util.Constants.INTENT_EXTRA_NAME_PLAYLIST_ID;
+import static net.sourceforge.subsonic.androidapp.util.Constants.INTENT_EXTRA_NAME_PLAYLIST_NAME;
+import static net.sourceforge.subsonic.androidapp.util.Constants.INTENT_EXTRA_NAME_REFRESH;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import net.sourceforge.subsonic.androidapp.domain.MusicDirectory;
+import net.sourceforge.subsonic.androidapp.service.DownloadFile;
+import net.sourceforge.subsonic.androidapp.service.MusicService;
+import net.sourceforge.subsonic.androidapp.service.MusicServiceFactory;
+import net.sourceforge.subsonic.androidapp.util.EntryAdapter;
+import net.sourceforge.subsonic.androidapp.util.Pair;
+import net.sourceforge.subsonic.androidapp.util.PopupMenuHelper;
+import net.sourceforge.subsonic.androidapp.util.TabActivityBackgroundTask;
+import net.sourceforge.subsonic.androidapp.util.Util;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -41,18 +64,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
-import net.sourceforge.subsonic.androidapp.R;
-import net.sourceforge.subsonic.androidapp.domain.MusicDirectory;
-import net.sourceforge.subsonic.androidapp.service.DownloadFile;
-import net.sourceforge.subsonic.androidapp.service.MusicService;
-import net.sourceforge.subsonic.androidapp.service.MusicServiceFactory;
-import net.sourceforge.subsonic.androidapp.util.EntryAdapter;
-import net.sourceforge.subsonic.androidapp.util.Pair;
-import net.sourceforge.subsonic.androidapp.util.PopupMenuHelper;
-import net.sourceforge.subsonic.androidapp.util.TabActivityBackgroundTask;
-import net.sourceforge.subsonic.androidapp.util.Util;
 
-import static net.sourceforge.subsonic.androidapp.util.Constants.*;
+import com.runners_id.android.superampify.R;
 
 public class SelectAlbumActivity extends SubsonicTabActivity {
 

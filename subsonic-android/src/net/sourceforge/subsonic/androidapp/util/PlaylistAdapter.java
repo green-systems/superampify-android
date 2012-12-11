@@ -18,18 +18,19 @@
  */
 package net.sourceforge.subsonic.androidapp.util;
 
-import android.content.Context;
-import android.widget.ArrayAdapter;
-import android.widget.SectionIndexer;
-import net.sourceforge.subsonic.androidapp.R;
-import net.sourceforge.subsonic.androidapp.domain.Playlist;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+
+import net.sourceforge.subsonic.androidapp.domain.Playlist;
+import android.content.Context;
+import android.widget.ArrayAdapter;
+import android.widget.SectionIndexer;
+
+import com.runners_id.android.superampify.R;
 
 /**
 * @author Sindre Mehus

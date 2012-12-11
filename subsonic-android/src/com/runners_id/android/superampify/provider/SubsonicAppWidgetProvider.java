@@ -16,8 +16,14 @@
 
  Copyright 2010 (C) Sindre Mehus
  */
-package net.sourceforge.subsonic.androidapp.provider;
+package com.runners_id.android.superampify.provider;
 
+import net.sourceforge.subsonic.androidapp.activity.DownloadActivity;
+import net.sourceforge.subsonic.androidapp.activity.MainActivity;
+import net.sourceforge.subsonic.androidapp.domain.MusicDirectory;
+import net.sourceforge.subsonic.androidapp.service.DownloadService;
+import net.sourceforge.subsonic.androidapp.service.DownloadServiceImpl;
+import net.sourceforge.subsonic.androidapp.util.FileUtil;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
@@ -31,13 +37,8 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.RemoteViews;
-import net.sourceforge.subsonic.androidapp.R;
-import net.sourceforge.subsonic.androidapp.activity.DownloadActivity;
-import net.sourceforge.subsonic.androidapp.activity.MainActivity;
-import net.sourceforge.subsonic.androidapp.domain.MusicDirectory;
-import net.sourceforge.subsonic.androidapp.service.DownloadService;
-import net.sourceforge.subsonic.androidapp.service.DownloadServiceImpl;
-import net.sourceforge.subsonic.androidapp.util.FileUtil;
+
+import com.runners_id.android.superampify.R;
 
 /**
  * Simple widget to show currently playing album art along

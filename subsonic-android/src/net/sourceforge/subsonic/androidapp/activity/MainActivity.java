@@ -21,6 +21,18 @@ package net.sourceforge.subsonic.androidapp.activity;
 
 import java.util.Arrays;
 
+import net.sourceforge.subsonic.androidapp.billing.BillingConstants;
+import net.sourceforge.subsonic.androidapp.billing.BillingService;
+import net.sourceforge.subsonic.androidapp.billing.PurchaseMode;
+import net.sourceforge.subsonic.androidapp.billing.PurchaseObserver;
+import net.sourceforge.subsonic.androidapp.billing.ResponseHandler;
+import net.sourceforge.subsonic.androidapp.service.DownloadService;
+import net.sourceforge.subsonic.androidapp.service.DownloadServiceImpl;
+import net.sourceforge.subsonic.androidapp.util.Constants;
+import net.sourceforge.subsonic.androidapp.util.FileUtil;
+import net.sourceforge.subsonic.androidapp.util.MergeAdapter;
+import net.sourceforge.subsonic.androidapp.util.PopupMenuHelper;
+import net.sourceforge.subsonic.androidapp.util.Util;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -37,19 +49,8 @@ import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
-import net.sourceforge.subsonic.androidapp.R;
-import net.sourceforge.subsonic.androidapp.billing.BillingConstants;
-import net.sourceforge.subsonic.androidapp.billing.BillingService;
-import net.sourceforge.subsonic.androidapp.billing.PurchaseMode;
-import net.sourceforge.subsonic.androidapp.billing.PurchaseObserver;
-import net.sourceforge.subsonic.androidapp.billing.ResponseHandler;
-import net.sourceforge.subsonic.androidapp.service.DownloadService;
-import net.sourceforge.subsonic.androidapp.service.DownloadServiceImpl;
-import net.sourceforge.subsonic.androidapp.util.Constants;
-import net.sourceforge.subsonic.androidapp.util.FileUtil;
-import net.sourceforge.subsonic.androidapp.util.MergeAdapter;
-import net.sourceforge.subsonic.androidapp.util.PopupMenuHelper;
-import net.sourceforge.subsonic.androidapp.util.Util;
+
+import com.runners_id.android.superampify.R;
 
 public class MainActivity extends SubsonicTabActivity {
 

@@ -21,6 +21,8 @@ package net.sourceforge.subsonic.androidapp.activity;
 import java.util.HashMap;
 import java.util.Map;
 
+import net.sourceforge.subsonic.androidapp.audiofx.EqualizerController;
+import net.sourceforge.subsonic.androidapp.service.DownloadServiceImpl;
 import android.app.Activity;
 import android.media.audiofx.Equalizer;
 import android.os.Bundle;
@@ -32,9 +34,8 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import net.sourceforge.subsonic.androidapp.R;
-import net.sourceforge.subsonic.androidapp.audiofx.EqualizerController;
-import net.sourceforge.subsonic.androidapp.service.DownloadServiceImpl;
+
+import com.runners_id.android.superampify.R;
 
 /**
  * Equalizer controls.

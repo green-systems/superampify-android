@@ -18,20 +18,6 @@
  */
 package net.sourceforge.subsonic.androidapp.service;
 
-import android.content.Context;
-import android.os.Handler;
-import android.util.Log;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ProgressBar;
-import android.widget.Toast;
-import net.sourceforge.subsonic.androidapp.R;
-import net.sourceforge.subsonic.androidapp.domain.JukeboxStatus;
-import net.sourceforge.subsonic.androidapp.domain.PlayerState;
-import net.sourceforge.subsonic.androidapp.service.parser.SubsonicRESTException;
-import net.sourceforge.subsonic.androidapp.util.Util;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -41,6 +27,21 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
+
+import net.sourceforge.subsonic.androidapp.domain.JukeboxStatus;
+import net.sourceforge.subsonic.androidapp.domain.PlayerState;
+import net.sourceforge.subsonic.androidapp.service.parser.SubsonicRESTException;
+import net.sourceforge.subsonic.androidapp.util.Util;
+import android.content.Context;
+import android.os.Handler;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+
+import com.runners_id.android.superampify.R;
 
 /**
  * Provides an asynchronous interface to the remote jukebox on the Subsonic server.

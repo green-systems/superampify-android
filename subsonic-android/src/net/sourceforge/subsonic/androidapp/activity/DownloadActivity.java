@@ -18,6 +18,11 @@
  */
 package net.sourceforge.subsonic.androidapp.activity;
 
+import static net.sourceforge.subsonic.androidapp.domain.PlayerState.COMPLETED;
+import static net.sourceforge.subsonic.androidapp.domain.PlayerState.IDLE;
+import static net.sourceforge.subsonic.androidapp.domain.PlayerState.PAUSED;
+import static net.sourceforge.subsonic.androidapp.domain.PlayerState.STOPPED;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -29,6 +34,20 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
+import net.sourceforge.subsonic.androidapp.domain.MusicDirectory;
+import net.sourceforge.subsonic.androidapp.domain.PlayerState;
+import net.sourceforge.subsonic.androidapp.domain.RepeatMode;
+import net.sourceforge.subsonic.androidapp.service.DownloadFile;
+import net.sourceforge.subsonic.androidapp.service.DownloadService;
+import net.sourceforge.subsonic.androidapp.service.MusicService;
+import net.sourceforge.subsonic.androidapp.service.MusicServiceFactory;
+import net.sourceforge.subsonic.androidapp.util.Constants;
+import net.sourceforge.subsonic.androidapp.util.FadeOutAnimation;
+import net.sourceforge.subsonic.androidapp.util.PopupMenuHelper;
+import net.sourceforge.subsonic.androidapp.util.SilentBackgroundTask;
+import net.sourceforge.subsonic.androidapp.util.SongView;
+import net.sourceforge.subsonic.androidapp.util.Util;
+import net.sourceforge.subsonic.androidapp.view.VisualizerView;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -60,23 +79,8 @@ import android.widget.ListView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
-import net.sourceforge.subsonic.androidapp.R;
-import net.sourceforge.subsonic.androidapp.domain.MusicDirectory;
-import net.sourceforge.subsonic.androidapp.domain.PlayerState;
-import net.sourceforge.subsonic.androidapp.domain.RepeatMode;
-import net.sourceforge.subsonic.androidapp.service.DownloadFile;
-import net.sourceforge.subsonic.androidapp.service.DownloadService;
-import net.sourceforge.subsonic.androidapp.service.MusicService;
-import net.sourceforge.subsonic.androidapp.service.MusicServiceFactory;
-import net.sourceforge.subsonic.androidapp.util.Constants;
-import net.sourceforge.subsonic.androidapp.util.FadeOutAnimation;
-import net.sourceforge.subsonic.androidapp.util.PopupMenuHelper;
-import net.sourceforge.subsonic.androidapp.util.SilentBackgroundTask;
-import net.sourceforge.subsonic.androidapp.util.SongView;
-import net.sourceforge.subsonic.androidapp.util.Util;
-import net.sourceforge.subsonic.androidapp.view.VisualizerView;
 
-import static net.sourceforge.subsonic.androidapp.domain.PlayerState.*;
+import com.runners_id.android.superampify.R;
 
 public class DownloadActivity extends SubsonicTabActivity implements OnGestureListener {
 

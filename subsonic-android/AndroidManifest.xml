@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="net.sourceforge.subsonic.androidapp"
+          package="com.runners_id.android.superampify"
           android:installLocation="auto"
           android:versionCode="49"
           android:versionName="3.6">
@@ -110,7 +110,7 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name="net.sourceforge.subsonic.androidapp.provider.SubsonicAppWidgetProvider">
+        <receiver android:name="com.runners_id.android.superampify.provider.SubsonicAppWidgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
             </intent-filter>
@@ -125,8 +125,8 @@
             </intent-filter>
         </receiver>
 
-        <provider android:name="net.sourceforge.subsonic.androidapp.provider.SearchSuggestionProvider"
-                  android:authorities="net.sourceforge.subsonic.androidapp.provider.SearchSuggestionProvider"/>
+        <provider android:name="com.runners_id.android.superampify.provider.SearchSuggestionProvider"
+                  android:authorities="com.runners_id.android.superampify.provider.SearchSuggestionProvider"/>
 
         <meta-data android:name="android.app.default_searchable"
                    android:value="net.sourceforge.subsonic.androidapp.activity.QueryReceiverActivity"/>
