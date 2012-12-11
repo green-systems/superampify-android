@@ -273,9 +273,9 @@ public class MainActivity extends SubsonicTabActivity {
 
         MenuItem menuItem1 = menu.add(MENU_GROUP_SERVER, MENU_ITEM_SERVER_1, MENU_ITEM_SERVER_1, Util.getServerName(this, 1));
         MenuItem menuItem2 = menu.add(MENU_GROUP_SERVER, MENU_ITEM_SERVER_2, MENU_ITEM_SERVER_2, Util.getServerName(this, 2));
-        MenuItem menuItem3 = menu.add(MENU_GROUP_SERVER, MENU_ITEM_SERVER_3, MENU_ITEM_SERVER_3, Util.getServerName(this, 3));
+//      MenuItem menuItem3 = menu.add(MENU_GROUP_SERVER, MENU_ITEM_SERVER_3, MENU_ITEM_SERVER_3, Util.getServerName(this, 3));
         menu.setGroupCheckable(MENU_GROUP_SERVER, true, true);
-        menu.setHeaderTitle(R.string.main_select_server);
+        menu.setHeaderTitle(R.string.subtunes_main_select_account);
 
         switch (Util.getActiveServer(this)) {
             case 1:
@@ -284,9 +284,9 @@ public class MainActivity extends SubsonicTabActivity {
             case 2:
                 menuItem2.setChecked(true);
                 break;
-            case 3:
+/*          case 3:
                 menuItem3.setChecked(true);
-                break;
+                break;	*/
         }
     }
 

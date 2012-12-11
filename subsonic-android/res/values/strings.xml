@@ -241,5 +241,11 @@
         <item quantity="one">One day left of trial period</item>
         <item quantity="other">%d days left of trial period</item>
     </plurals>
+    
+    <string name="subtunes.settings.account_title">Account</string>
+    <string name="subtunes.settings.title">Subtunes settings</string>
+    <string name="subtunes.main.select_account">Account</string>
+    <string name="subtunes.demo_account_name">Demo</string>
+    <string name="subtunes.my_account_name">My Account</string>
 
 </resources>

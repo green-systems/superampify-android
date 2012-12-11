@@ -174,8 +174,12 @@ public final class Util {
     }
 
     public static String getServerName(Context context, int instance) {
-        SharedPreferences prefs = getPreferences(context);
-        return prefs.getString(Constants.PREFERENCES_KEY_SERVER_NAME + instance, null);
+    	switch(instance){
+	    	case 1:
+	    		return context.getString(R.string.subtunes_demo_account_name);
+	    	default:
+	    		return context.getString(R.string.subtunes_my_account_name);
+    	}
     }
 
     public static void setServerRestVersion(Context context, Version version) {

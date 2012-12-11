@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content">
 
             <TextView android:id="@+id/main.select_server_1"
-                      android:text="@string/main.select_server"
+                      android:text="@string/subtunes.main.select_account"
                       android:layout_width="fill_parent"
                       android:layout_height="wrap_content"
                       android:layout_marginLeft="10dip"

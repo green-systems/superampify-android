@@ -58,14 +58,14 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.settings);
+        addPreferencesFromResource(R.xml.subtunes_settings);
 
         maxBitrateWifi = (ListPreference) findPreference(Constants.PREFERENCES_KEY_MAX_BITRATE_WIFI);
         maxBitrateMobile = (ListPreference) findPreference(Constants.PREFERENCES_KEY_MAX_BITRATE_MOBILE);
         cacheSize = (ListPreference) findPreference(Constants.PREFERENCES_KEY_CACHE_SIZE);
         cacheLocation = (EditTextPreference) findPreference(Constants.PREFERENCES_KEY_CACHE_LOCATION);
         preloadCount = (ListPreference) findPreference(Constants.PREFERENCES_KEY_PRELOAD_COUNT);
-
+/*
         findPreference("testConnection1").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
@@ -104,7 +104,7 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
             String instance = String.valueOf(i);
             serverSettings.put(instance, new ServerSettings(instance));
         }
-
+*/
         SharedPreferences prefs = Util.getPreferences(this);
         prefs.registerOnSharedPreferenceChangeListener(this);
 
