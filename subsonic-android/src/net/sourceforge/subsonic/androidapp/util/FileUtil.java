@@ -128,7 +128,7 @@ public class FileUtil {
     }
 
     public static File getSubsonicDirectory() {
-        return new File(Environment.getExternalStorageDirectory(), "subsonic");
+        return new File(Environment.getExternalStorageDirectory(), "subtunes");
     }
 
     public static File getDefaultMusicDirectory() {
